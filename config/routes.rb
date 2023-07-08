@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :posts
+
   root 'pages#home'
-  get '/about', to:'pages#about'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get '/about', to: 'pages#about'
+
+  # Add the following line to define the sign-out route
+  # delete '/users/sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
+
+  # Define your additional application routes here
 
   # Defines the root path route ("/")
   # root "articles#index"
