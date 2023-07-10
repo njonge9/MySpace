@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   get '/u/:id', to: 'users#profile', as: 'user'
 
-  resources :posts
+  resources :posts do
+    resources :comment
+  end
 
   root 'pages#home'
   get '/about', to: 'pages#about'
