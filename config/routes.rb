@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/u/:id', to: 'users#profile', as: 'user'
 
   resources :posts do
-    resources :comment
+    resources :comments
   end
 
   root 'pages#home'
