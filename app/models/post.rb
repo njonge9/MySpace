@@ -4,6 +4,6 @@ class Post < ApplicationRecord
     has_many :comments, dependent: :destroy
     belongs_to :user
 
-    has_noticed_notification model_name: 'Notification'
-    has_many :notifications, through: :user, dependant: :destroy
+    has_noticed_notifications model_name: 'Notification'
+    has_many :notifications, through: :user, dependent: :destroy
 end

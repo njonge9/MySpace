@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
   has_rich_text :body
   after_create_commit :notify_recipient
   before_destroy :cleanup_notification
-  has_noticed_notification model_name: 'Notification'
+  has_noticed_notifications model_name: 'Notification'
 
   private
 
